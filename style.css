@@ -7,8 +7,8 @@
   --ff-primary: Josefin Sans, sans-serif;
   --ff-secondary: Alata, sans-serif;
 
-  --fw-primary-regular: 400;
-  --fw-secondary-regular: 300;
+  --fw-primary-light: 300;
+  --fw-secondary-regular: 400;
 
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
@@ -17,6 +17,13 @@
   --fs-700: 1.875rem;
   --fs-800: 2.5rem;
   --fs-900: 3.5rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-400);
+  --fs-button: var(--fs-500);
+  --fs-element-title: var(--fs-600);
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
@@ -27,8 +34,17 @@
   --size-700: 3rem;
   --size-800: 4rem;
   --size-900: 5rem;
+}
 
-  --fs-body: var(--fs-500);
+@media (min-width: 50em) {
+  :root {
+    --fs-body: var(--fs-500);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+    --fs-nav: var(--fs-500);
+    --fs-button: var(--fs-600);
+    --fs-element-title: var(--fs-700);
+  }
 }
 
 /* Box sizing rules */
@@ -84,13 +100,14 @@ svg {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
-button {
+/* button {
   background: none;
   border: none;
   cursor: pointer;
-}
+} */
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -131,8 +148,8 @@ button {
 }
 
 /* Font weight */
-.fw-primary-regular {
-  font-weight: var(--fw-primary-regular);
+.fw-primary-light {
+  font-weight: var(--fw-primary-light);
 }
 .fw-secondary-regular {
   font-weight: var(--fw-secondary-regular);
@@ -154,11 +171,13 @@ button {
 .fs-700 {
   font-size: var(--fs-700);
 }
-.fs-800 {
-  font-size: var(--fs-800);
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.1;
 }
-.fs-900 {
-  font-size: var(--fs-900);
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+  line-height: 1.1;
 }
 
 /* Padding inline */
@@ -221,10 +240,64 @@ button {
 
 /* Bg-img */
 .bg-img-intro {
-  background: url(./images/desktop/image-hero.jpg);
+  background-image: url(./images/desktop/image-hero.jpg);
   background-repeat: no-repeat;
   /* background-position: center; */
   background-size: cover;
+}
+.bg-img-1-1 {
+  background-image: url(./images/desktop/image-deep-earth.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-1-2 {
+  background-image: url(./images/desktop/image-night-arcade.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-1-3 {
+  background-image: url(./images/desktop/image-soccer-team.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-1-4 {
+  background-image: url(./images/desktop/image-grid.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-2-1 {
+  background-image: url(./images/desktop/image-from-above.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-2-2 {
+  background-image: url(./images/desktop/image-pocket-borealis.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-2-3 {
+  background-image: url(./images/desktop/image-curiosity.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-img-2-4 {
+  background-image: url(./images/desktop/image-fisheye.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Bg color */
+.bg-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
+}
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
 }
 
 /* Various */
@@ -247,4 +320,26 @@ body {
   font-size: var(--fs-body);
   font-family: var(--ff-primary);
   color: var(--clr-primary-100);
+}
+
+p[data-width='wide'] {
+  opacity: 0.7;
+  max-width: 46ch;
+}
+
+button {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1.25em 2.5em;
+
+  /* line-height: 1; */
+
+  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-secondary-regular);
+  letter-spacing: 0.2rem;
+  border: 1px solid var(--clr-primary-400);
+  background-color: var(--clr-primary-100);
 }
