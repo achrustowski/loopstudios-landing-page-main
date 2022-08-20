@@ -737,7 +737,7 @@ button:not([class]):focus-visible {
   padding-bottom: 1rem;
 }
 
-.primary-footer-nav h4 {
+.primary-footer-nav h3 {
   font-family: var(--ff-secondary);
   color: var(--clr-primary-200);
   font-size: var(--fs-300);
