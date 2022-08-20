@@ -596,7 +596,7 @@ button:not([class]):focus-visible {
     justify-content: space-between;
   }
 
-  #img-mobile {
+  .img-mobile {
     display: none;
   }
 
@@ -677,7 +677,7 @@ button:not([class]):focus-visible {
     padding-bottom: 1rem;
   }
 
-  #img-desktop {
+  .img-desktop {
     display: none;
   }
 
