@@ -16,7 +16,7 @@
   --fs-600: 1rem;
   --fs-700: 1.875rem;
   --fs-750: 2rem;
-  --fs-800: 2.5rem;
+  --fs-800: 2.75rem;
   --fs-850: 3.25rem;
   --fs-900: 4.25rem;
 
@@ -325,13 +325,16 @@ button:not([class]):focus-visible {
 }
 
 /* Navigation */
+.backdrop {
+  backdrop-filter: brightness(60%);
+}
 
 .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 3.5rem;
-  padding-bottom: 8rem;
+  padding-top: 3.75rem;
+  padding-bottom: 9rem;
 }
 
 .primary-header {
@@ -462,12 +465,14 @@ button:not([class]):focus-visible {
 .intro-title {
   width: fit-content;
   border: 2px solid var(--clr-primary-100);
-  padding-top: var(--size-650);
-  padding-bottom: var(--size-600);
+  padding-top: 2rem;
+  padding-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
 }
 
 .intro-title > h1 {
-  max-width: 15ch;
+  max-width: 14ch;
   letter-spacing: 0.1rem;
 }
 
@@ -505,7 +510,8 @@ button:not([class]):focus-visible {
   display: grid;
   grid-template-columns: repeat(40, 1fr);
   position: relative;
-  padding-block: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 11rem;
 }
 
 .interactive-text {
@@ -514,7 +520,7 @@ button:not([class]):focus-visible {
   align-self: flex-end;
   background-color: var(--clr-primary-100);
   grid-row: 1;
-  grid-column: 21 / span 20;
+  grid-column: 22 / span 21;
   z-index: 998;
   padding-left: 5.5rem;
   padding-top: 5rem;
@@ -523,11 +529,16 @@ button:not([class]):focus-visible {
 
 .interactive-text h2 {
   padding-bottom: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+
+.interactive-img > img {
+  width: 100%;
 }
 
 .interactive-img {
   grid-row: 1;
-  grid-column: 1 / span 25;
+  grid-column: 1 / span 27;
   position: relative;
   bottom: 1px;
 }
@@ -574,8 +585,8 @@ button:not([class]):focus-visible {
 .grid-container {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
-  padding-bottom: 10rem;
+  row-gap: 5rem;
+  padding-bottom: 11rem;
 }
 
 @media (min-width: 50em) {
@@ -612,10 +623,11 @@ button:not([class]):focus-visible {
   text-transform: uppercase;
   font-family: var(--ff-primary);
   font-size: var(--fs-element-title);
-  transform: translateY(-135%) translateX(15%);
+  transform: translateY(-138%) translateX(25%);
   width: 9ch;
   line-height: 1.1;
   transition: 0.5s;
+  opacity: 1;
 }
 
 .grid-element img {
