@@ -592,6 +592,10 @@ button:not([class]):focus-visible {
   #see-all-mobile {
     display: none;
   }
+
+  .grid-element img {
+    transform: translateX(1%);
+  }
 }
 
 .grid-elements-container {
@@ -617,7 +621,6 @@ button:not([class]):focus-visible {
 .grid-element img {
   transition: 0.5s;
   filter: brightness(80%);
-  transform: translateX(1%);
 }
 
 .grid-element:hover img {
