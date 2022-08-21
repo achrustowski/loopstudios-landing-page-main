@@ -16,12 +16,3 @@ navToggle.addEventListener("click", () => {
   iconHamburger.classList.toggle("display-none");
   iconClose.classList.toggle("display-none");
 });
-
-// const imgOne = document.getElementById("img-1");
-// const imgTwo = document.getElementById("img-2");
-// const imgThree = document.getElementById("img-3");
-// const imgFour = document.getElementById("img-4");
-// const imgFive = document.getElementById("img-5");
-// const imgSix = document.getElementById("img-6");
-// const imgSeven = document.getElementById("img-7");
-// const imgEight = document.getElementById("img-8");
